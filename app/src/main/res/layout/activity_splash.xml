@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.acquiresdk.activities.SplashActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashLogo"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_30"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dp_280"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_splash_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashSdk"
+        android:layout_width="@dimen/dp_38"
+        android:layout_height="@dimen/dp_19"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/ic_rectangle"
+        android:padding="@dimen/dp_5"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/imgSplashLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imgSplashLogo"
+        app:srcCompat="@drawable/ic_sdk" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashMessage"
+        android:layout_width="@dimen/activity_horizontal_margin"
+        android:layout_height="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_65"
+        app:layout_constraintBottom_toTopOf="@+id/imgSplashBottom"
+        app:layout_constraintEnd_toStartOf="@+id/imgSplashCoBrowse"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_spalsh_message" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashChat"
+        android:layout_width="@dimen/activity_horizontal_margin"
+        android:layout_height="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/dp_65"
+        app:layout_constraintBottom_toTopOf="@+id/imgSplashBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgSplashVideo"
+        app:srcCompat="@drawable/ic_splash_chat" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashCall"
+        android:layout_width="@dimen/activity_horizontal_margin"
+        android:layout_height="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgSplashBottom"
+        app:layout_constraintEnd_toStartOf="@+id/imgSplashVideo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgSplashCoBrowse"
+        app:srcCompat="@drawable/ic_splash_call" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashCoBrowse"
+        android:layout_width="@dimen/activity_horizontal_margin"
+        android:layout_height="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgSplashBottom"
+        app:layout_constraintEnd_toStartOf="@+id/imgSplashCall"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgSplashMessage"
+        app:srcCompat="@drawable/ic_splash_co_browse" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashVideo"
+        android:layout_width="@dimen/activity_horizontal_margin"
+        android:layout_height="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="65dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgSplashBottom"
+        app:layout_constraintEnd_toStartOf="@+id/imgSplashChat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgSplashCall"
+        app:srcCompat="@drawable/ic_splash_video_call" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgSplashBottom"
+        android:layout_width="134dp"
+        android:layout_height="@dimen/dp_5"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_splash_indicator" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.acquiresdk.activities.ui.settings.SettingsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="90dp">
+
+            <include
+                android:id="@+id/incToolbar"
+                layout="@layout/toolbar" />
+
+            <TextView
+                android:id="@+id/txtSettingCo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/title_cobrowse_s"
+                android:textAppearance="@style/sHeader3AQR"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/incToolbar" />
+
+            <TextView
+                android:id="@+id/txtSettingCoDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="4dp"
+                android:text="@string/personal_detail"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSettingCo" />
+
+            <RelativeLayout
+                android:id="@+id/rlSettingCo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_settings"
+                android:orientation="vertical"
+                android:padding="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSettingCoDetail">
+
+                <TextView
+                    android:id="@+id/txtSCodeL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cobrowse_co"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtSCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSCodeL"
+                    android:layout_marginTop="8dp"
+                    android:text="12345"
+                    android:textAppearance="@style/sHeader4AQR" />
+
+                <TextView
+                    android:id="@+id/txtSMaskingL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSCode"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/masking_vie"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtSMasking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSMaskingL"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/this_will_w"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <LinearLayout
+                    android:id="@+id/llSMasking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSMasking"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/txtSMaxL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSMasking"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/max_update_"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtSMax"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSMaxL"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/set_time_of"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <EditText
+                    android:id="@+id/etSMax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSMax"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_box_default"
+                    android:hint="1000"
+                    android:inputType="text"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:selectAllOnFocus="true"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <TextView
+                    android:id="@+id/txtSMinL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etSMax"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/min_update_"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtSMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSMinL"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/minimum_int"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <EditText
+                    android:id="@+id/etSMin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSMin"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_box_default"
+                    android:hint="400"
+                    android:inputType="text"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:selectAllOnFocus="true"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <TextView
+                    android:id="@+id/txtSBitmapL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etSMin"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/bitmap_qual"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtSBitmap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSBitmapL"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/set_quality"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <EditText
+                    android:id="@+id/etSBitmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSBitmap"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_box_default"
+                    android:hint="10"
+                    android:inputType="text"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:selectAllOnFocus="true"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <TextView
+                    android:id="@+id/txtSCoCodeL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etSBitmap"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/cobrowse_co"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtSCoCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSCoCodeL"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/set_quality"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <EditText
+                    android:id="@+id/etSCoCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSCoCode"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_box_default"
+                    android:hint="@string/prompt_enter_cobro"
+                    android:inputType="text"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:selectAllOnFocus="true"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <TextView
+                    android:id="@+id/txtSHideStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etSCoCode"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/hide_stop_b"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etSCoCode"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/txtSConfirmStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSHideStop"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/confirm_sto"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSHideStop"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:checked="true" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtSettingFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/fab_icon_se"
+                android:textAppearance="@style/sHeader3AQR"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlSettingCo" />
+
+            <TextView
+                android:id="@+id/txtSettingFabDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="4dp"
+                android:text="@string/fab_this_can_be"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSettingFab" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_vertical_margin"
+                android:background="@drawable/bg_settings"
+                android:orientation="vertical"
+                android:padding="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSettingFabDetail">
+
+                <TextView
+                    android:id="@+id/txtSFabL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/support_fab"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtSFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSFabL"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/note_show_h"
+                    android:textAppearance="@style/SubTitleStyle"
+                    android:textColor="#FF4651" />
+
+                <LinearLayout
+                    android:id="@+id/btSSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSFab"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btMoreReset"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/txtSFab"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_button_1"
+                        android:text="@string/show_fab_ic"
+                        android:textAppearance="@style/sHeader3AQR"
+                        android:textColor="@color/colorPrimary" />
+
+                    <Button
+                        android:id="@+id/btMoreSave"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/txtSFab"
+                        android:layout_marginStart="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_button_1"
+                        android:text="@string/remove_fab_"
+                        android:textAppearance="@style/ButtonTextStyle"
+                        android:textColor="@color/colorPrimary" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtSFabSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btSSupport"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/fab_icon_si"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <RelativeLayout
+                    android:id="@+id/llSFabSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSFabSize"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_box_default"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal"
+                        android:textAppearance="@style/SubTitleStyle" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgSFabSize"
+                        android:layout_width="18dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:rotation="90"
+                        app:srcCompat="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtSFabPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSFabSize"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/fab_icon_si"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <RelativeLayout
+                    android:id="@+id/llSFabPosition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSFabPosition"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_box_default"
+                    android:padding="@dimen/activity_vertical_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/normal"
+                        android:textAppearance="@style/SubTitleStyle" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgSFabPosition"
+                        android:layout_width="18dp"
+                        android:layout_height="10dp"
+                        android:layout_alignParentRight="true"
+                        android:rotation="90"
+                        app:srcCompat="@drawable/ic_next" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtSFabTextL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSFabPosition"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/fab_text"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <EditText
+                    android:id="@+id/etSFabText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSFabTextL"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_box_default"
+                    android:hint="1000"
+                    android:inputType="text"
+                    android:padding="@dimen/activity_vertical_margin"
+                    android:selectAllOnFocus="true"
+                    android:textAppearance="@style/EditTextStyle" />
+
+                <TextView
+                    android:id="@+id/txtSFabTextColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/etSFabText"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/fab_text_co"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <LinearLayout
+                    android:id="@+id/llSFabTextColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSFabTextColor"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/txtSFabButtonColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSFabTextColor"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/fab_button_"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <LinearLayout
+                    android:id="@+id/llSFabButtonColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtSFabButtonColor"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/txtSFabAnimate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSFabButtonColor"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/fab_animati"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llSFabButtonColor"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:checked="true" />
+
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:background="#ffffff">
+
+            <Button
+                android:id="@+id/btSettingSave"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:background="@drawable/bg_button_1"
+                android:text="@string/save_change"
+                android:textAppearance="@style/sHeader3AQR"
+                android:textColor="@color/colorPrimary" />
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

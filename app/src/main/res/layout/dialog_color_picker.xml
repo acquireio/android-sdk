@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="@dimen/dp_15"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="@dimen/dp_15"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <com.lyc.colorpicker.SVColorPickerView
+                        android:id="@+id/pickerDiaColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        app:thumbDrawable="@drawable/ic_picker_thumb" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_horizontal_margin"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    app:cardCornerRadius="@dimen/dp_15"
+                    app:cardElevation="0dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <com.lyc.colorpicker.HueBarView
+                        android:id="@+id/hbv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:orientation="horizontal"
+                        app:thumbDrawable="@drawable/ic_picker_thumb" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Color" />
+
+                <View
+                    android:id="@+id/view_color"
+                    android:layout_width="64dp"
+                    android:layout_height="@dimen/activity_horizontal_margin"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hex"
+                        android:textAppearance="@style/sHeader3AQR" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        app:cardBackgroundColor="#EBF0FF"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            app:cardBackgroundColor="#ffffff"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <EditText
+                                android:id="@+id/etColorHex"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:adjustViewBounds="true"
+                                android:background="@null"
+                                android:hint="Hex"
+                                android:inputType="text"
+                                android:padding="10dp"
+                                android:selectAllOnFocus="true"
+                                android:textAppearance="@style/EditTextStyle" />
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R"
+                        android:textAppearance="@style/sHeader3AQR" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        app:cardBackgroundColor="#EBF0FF"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            app:cardBackgroundColor="#ffffff"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <EditText
+                                android:id="@+id/etColorR"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:background="@null"
+                                android:hint="R"
+                                android:inputType="text"
+                                android:padding="10dp"
+                                android:selectAllOnFocus="true"
+                                android:textAppearance="@style/EditTextStyle" />
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="G"
+                        android:textAppearance="@style/sHeader3AQR" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        app:cardBackgroundColor="#EBF0FF"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            app:cardBackgroundColor="#ffffff"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <EditText
+                                android:id="@+id/etColorG"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:background="@null"
+                                android:hint="G"
+                                android:inputType="text"
+                                android:padding="10dp"
+                                android:selectAllOnFocus="true"
+                                android:textAppearance="@style/EditTextStyle" />
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B"
+                        android:textAppearance="@style/sHeader3AQR" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_5"
+                        app:cardBackgroundColor="#EBF0FF"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="0dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1dp"
+                            app:cardBackgroundColor="#ffffff"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="0dp"
+                            app:cardPreventCornerOverlap="false">
+
+                            <EditText
+                                android:id="@+id/etColorB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="1dp"
+                                android:background="@null"
+                                android:hint="B"
+                                android:inputType="text"
+                                android:padding="10dp"
+                                android:selectAllOnFocus="true"
+                                android:textAppearance="@style/EditTextStyle" />
+                        </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btColorSave"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/dp_30"
+                android:background="@drawable/bg_button_1"
+                android:text="@string/save_change"
+                android:textAppearance="@style/sHeader3AQR"
+                android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

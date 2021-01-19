@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/incToolbar"
+                layout="@layout/toolbar" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/incToolbar" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvCartCoupon"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:padding="2dp"
+                app:cardBackgroundColor="@color/colorButtonBg"
+                app:cardCornerRadius="@dimen/dp_5"
+                app:cardElevation="0dp"
+                app:contentPadding="1dp"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewCart">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/etCouponCode"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginEnd="@dimen/dp_10"
+                            android:layout_weight="4"
+                            android:background="#ffffff"
+                            android:hint="@string/prompt_coupon"
+                            android:inputType="text"
+                            android:textAppearance="@style/EditTextStyle" />
+
+                        <Button
+                            android:id="@+id/btCouponApply"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@color/colorPrimary"
+                            android:text="@string/apply"
+                            android:textAppearance="@style/ButtonTextStyle" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/rlCartPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="@drawable/bg_cart"
+                android:padding="@dimen/activity_horizontal_margin"
+                app:layout_constraintTop_toBottomOf="@+id/cvCartCoupon">
+
+                <TextView
+                    android:id="@+id/txtCartItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Items (3)"
+                    android:textAppearance="@style/SubTitleStyle" />
+
+                <TextView
+                    android:id="@+id/txtCartSubTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="$598.86"
+                    android:textAppearance="@style/sHeader5AQR" />
+
+                <TextView
+                    android:id="@+id/txtCartShippingL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtCartItem"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/shipping"
+                    android:textAppearance="@style/SubTitleStyle" />
+
+                <TextView
+                    android:id="@+id/txtCartShipping"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtCartItem"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="$40.00"
+                    android:textAppearance="@style/sHeader5AQR" />
+
+                <TextView
+                    android:id="@+id/txtCartChargeL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtCartShippingL"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/import_char"
+                    android:textAppearance="@style/SubTitleStyle" />
+
+                <TextView
+                    android:id="@+id/txtCartCharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtCartShippingL"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="$128.00"
+                    android:textAppearance="@style/sHeader5AQR" />
+
+                <View
+                    android:id="@+id/viewDotted"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/txtCartChargeL"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@drawable/bg_dotted_line" />
+
+                <TextView
+                    android:id="@+id/txtCartTotalL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewDotted"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/total_price"
+                    android:textAppearance="@style/sHeader3AQR" />
+
+                <TextView
+                    android:id="@+id/txtCartTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/viewDotted"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="$766.86"
+                    android:textAppearance="@style/sHeader7AQR" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btCartCheckout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:background="@drawable/bg_cart"
+                android:text="@string/check_out"
+                android:textAppearance="@style/SubTextStyle1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlCartPrice" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:onClick="startChat"
+        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/ic_cart_floating" />
+</RelativeLayout>

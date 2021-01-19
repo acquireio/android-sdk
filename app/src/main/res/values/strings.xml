@@ -1,0 +1,149 @@
+<resources>
+    <string name="app_name">AcquireSdk</string>
+    <string name="simple_activity_transition" translatable="false">simple_activity_transition</string>
+
+
+    <!--  login-->
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_account_id">Account ID</string>
+    <string name="action_connect">Connect</string>
+    <string name="welcome">Welcome to Acquire SDK</string>
+    <string name="login_sub_title">Enter your Account ID to continue</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="if_don_t_ha">If don\'t have Acquire account please visit our website</string>
+    <string name="book_a_demo">Book a demo</string>
+
+    <!--    home-->
+    <string name="select_expe">Select experience</string>
+    <string name="title_widget">Widget Experience</string>
+    <string name="a_nice_disc">A nice discription about the widget style support button</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_more">More</string>
+    <string name="title_in_app">In App Experience</string>
+    <string name="title_cobrowse">Cobrowse\nExperience</string>
+    <string name="title_cobrowse_screen">Cobrowse Experience</string>
+    <string name="title_experience">Experience</string>
+    <string name="title_co_browse">Co - browse test page</string>
+    <string name="personal_detail">Personal details</string>
+    <string name="title_cart">Your test Cart</string>
+
+    <!-- Recent Conversations-->
+    <string name="title_conversation">Conversations</string>
+
+    <!-- FAQ-->
+    <string name="title_faqs">FAQs</string>
+
+    <!-- Getting Started-->
+    <string name="title_getting">Getting Started</string>
+    <string name="faq2_admin_tabs">Admin Tabs</string>
+    <string name="faq2_admin_tabs1">Acquire\'s customer support software lets you...</string>
+    <string name="faq2_create_your">Create your Acquire Account</string>
+    <string name="faq2_create_your1">Sign up and get started with Acquire in a...</string>
+    <string name="faq2_home_live">Home - Live Statistics</string>
+    <string name="faq2_some_id">-</string>
+    <string name="faq2_home_online">Home - Online Visitors</string>
+    <string name="faq2_home_online1">How to read and navigate the Acquire Home...</string>
+    <string name="faq2_home_widget">Home - Try your widget</string>
+    <string name="faq2_import_cust">Import customer</string>
+    <string name="faq2_import_cust1">Directly Import your customer details in Ac...</string>
+
+    <string name="prompt_name">Name</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_number">Contact Number</string>
+    <string name="payment_method">Payment method</string>
+    <string name="prompt_debit_credit">Debit/Credit card number</string>
+    <string name="country">Country</string>
+    <string name="prompt_cvv">CVV</string>
+    <string name="mm">MM</string>
+    <string name="yyyy">YYYY</string>
+    <string name="i_accept_al">I accept all terms &amp; conditions</string>
+    <string name="any_data_wh">Any data which is considered \'sensitive\' can be hidden from the agents end.</string>
+    <string name="type_in_the">1. type in the card details for the customers side\n2. You will not
+        be able to edit/view from the agent side</string>
+
+    <string name="change_account">Change Account ID</string>
+    <string name="sdk_status">SDK status</string>
+    <string name="connected">Connected</string>
+    <string name="logout">Logout</string>
+    <string name="cnt_account_id">Connected account ID</string>
+    <string name="reset">Reset</string>
+    <string name="save">Save</string>
+    <string name="apply">Apply</string>
+    <string name="prompt_coupon">Enter Coupon Code</string>
+    <string name="shipping">Shipping</string>
+    <string name="import_char">Import charges</string>
+    <string name="total_price">Total Price</string>
+    <string name="check_out">Check Out</string>
+
+    <string name="title_cobrowse_s">Cobrowse settings</string>
+    <string name="this_can_be">This can be applied using CobrowseBuilder class</string>
+    <string name="cobrowse_co">Cobrowse code</string>
+    <string name="masking_vie">Masking view color</string>
+    <string name="this_will_w">This will work in real time</string>
+    <string name="max_update_">Max update time</string>
+    <string name="set_time_of">set time of frames when screen is on</string>
+    <string name="min_update_">Min update time</string>
+    <string name="minimum_int">Minimum  interval for sending</string>
+    <string name="bitmap_qual">Bitmap quality</string>
+    <string name="set_quality">Set quality between 1 - 100</string>
+    <string name="any_alpha_n">Any alpha-numeric value</string>
+    <string name="prompt_enter_cobro">Enter cobrowse code</string>
+    <string name="hide_stop_b">Hide stop button</string>
+    <string name="confirm_sto">Confirm stop</string>
+
+    <string name="fab_icon_se">FAB icon settings</string>
+    <string name="fab_this_can_be">This can be applied using SupportFABBuilder class</string>
+    <string name="support_fab">
+
+Support FAB icon
+</string>
+    <string name="note_show_h">
+
+Note: show/hide FAB icon requires SDK to restart
+</string>
+
+    <string name="show_fab_ic">
+
+Show FAB icon
+</string>
+
+    <string name="remove_fab_">
+
+Remove FAB icon
+</string>
+    <string name="fab_icon_si">
+
+FAB icon size
+</string>
+    <string name="normal">
+
+Normal
+</string>
+
+    <string name="fab_text">
+
+FAB text
+</string>
+    <string name="fab_animati">
+
+FAB animation
+</string>
+
+    <string name="fab_text_co">
+
+FAB text color
+</string>
+    <string name="fab_button_">
+
+FAB button color
+</string>
+
+    <string name="title_customer_su">Customer support</string>
+    <string name="prompt_msg">Enter a message</string>
+    <string name="save_change">Save Changes</string>
+
+</resources>

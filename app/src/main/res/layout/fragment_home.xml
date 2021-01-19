@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <TextView
+        android:id="@+id/txtViewWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:text="Hey,\nwelcome to Acquire simulation SDK App"
+        android:textAppearance="@style/sHeader1AQR"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:text="@string/select_expe"
+        android:textAppearance="@style/sHeader2AQR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewWelcome" />
+
+    <!--    Widget experience start-->
+    <View
+        android:id="@+id/viewWidgetExp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rectangle_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewSelect" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/title_widget"
+        android:textAppearance="@style/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewSelect" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTitle"
+        app:srcCompat="@drawable/ic_next" />
+
+    <TextView
+        android:id="@+id/widgetExpSubTitle"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/a_nice_disc"
+        android:textAppearance="@style/a_nice_disc"
+        android:translationY="-1.8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:layout_goneMarginLeft="@dimen/dp_20" />
+
+    <View
+        android:id="@+id/viewBgWidget"
+        android:layout_width="280dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:alpha="0.5"
+        android:background="@drawable/bg_home_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewSelect" />
+    <!--    Widget experience End-->
+
+    <!--    in App experience start-->
+    <View
+        android:id="@+id/viewInAppExp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rectangle_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewWidgetExp" />
+
+    <TextView
+        android:id="@+id/txtTitleInApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/title_in_app"
+        android:textAppearance="@style/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewWidgetExp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTitleInApp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTitleInApp"
+        app:srcCompat="@drawable/ic_next" />
+
+    <TextView
+        android:id="@+id/txtInAppSubTitle"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/a_nice_disc"
+        android:textAppearance="@style/a_nice_disc"
+        android:translationY="-1.8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleInApp"
+        app:layout_goneMarginLeft="@dimen/dp_20" />
+
+    <View
+        android:id="@+id/viewBgInApp"
+        android:layout_width="230dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:alpha="0.7"
+        android:background="@drawable/ic_in_app"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewWidgetExp" />
+
+    <!--    in App experience End-->
+
+
+    <!--   CoBrowse experience start-->
+    <View
+        android:id="@+id/viewCoBrowseExp"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:background="@drawable/rectangle_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewInAppExp" />
+
+    <TextView
+        android:id="@+id/txtTitleCoBrowse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/title_cobrowse"
+        android:textAppearance="@style/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewInAppExp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtTitleCoBrowse"
+        app:srcCompat="@drawable/ic_next" />
+
+    <TextView
+        android:id="@+id/txtCoBrowseSubTitle"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="4sp"
+        android:text="@string/a_nice_disc"
+        android:textAppearance="@style/a_nice_disc"
+        android:translationY="-1.8sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleCoBrowse"
+        app:layout_goneMarginLeft="@dimen/dp_20" />
+
+    <View
+        android:id="@+id/viewBgCoBrowse"
+        android:layout_width="230dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:alpha="0.7"
+        android:background="@drawable/ic_co_browse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewInAppExp" />
+
+    <!--    CoBrowse experience End-->
+</androidx.constraintlayout.widget.ConstraintLayout>

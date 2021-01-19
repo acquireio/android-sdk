@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/incToolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginBottom="25dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/txtPersonalDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="@string/personal_detail"
+                android:textAppearance="@style/sHeader3AQR"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etCoName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_box_default"
+                android:hint="@string/prompt_name"
+                android:inputType="text"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPersonalDetail" />
+
+            <EditText
+                android:id="@+id/etCoEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edit_box_default"
+                android:hint="@string/prompt_email"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCoName" />
+
+            <EditText
+                android:id="@+id/etCoPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edit_box_default"
+                android:hint="@string/prompt_password"
+                android:inputType="textPassword"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintEnd_toStartOf="@+id/llCoCountry"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCoEmail" />
+
+            <RelativeLayout
+                android:id="@+id/llCoCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="25dp"
+                android:layout_weight="2"
+                android:background="@drawable/edit_box_default"
+                android:padding="@dimen/activity_vertical_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toEndOf="@id/etCoPassword"
+                app:layout_constraintTop_toBottomOf="@+id/etCoEmail">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/country"
+                    android:textAppearance="@style/SubTitleStyle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCoCountry"
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/ic_next" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/etCoNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edit_box_default"
+                android:hint="@string/prompt_number"
+                android:inputType="numberSigned"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCoPassword" />
+
+            <TextView
+                android:id="@+id/txtPaymentDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="@string/payment_method"
+                android:textAppearance="@style/sHeader3AQR"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCoNumber" />
+
+            <EditText
+                android:id="@+id/etCoDebit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_box_default"
+                android:hint="@string/prompt_debit_credit"
+                android:inputType="numberSigned"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPaymentDetail" />
+
+            <EditText
+                android:id="@+id/etCoCVV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/edit_box_default"
+                android:hint="@string/prompt_cvv"
+                android:inputType="numberSigned"
+                android:padding="@dimen/activity_vertical_margin"
+                android:textAppearance="@style/EditTextStyle"
+                app:layout_constraintEnd_toStartOf="@+id/llCoMonth"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCoDebit" />
+
+            <RelativeLayout
+                android:id="@+id/llCoMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_box_default"
+                android:padding="@dimen/activity_vertical_margin"
+                app:layout_constraintEnd_toEndOf="@+id/llCoYear"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/etCoCVV"
+                app:layout_constraintTop_toBottomOf="@+id/etCoDebit">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mm"
+                    android:textAppearance="@style/SubTitleStyle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCoMonth"
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/ic_next" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/llCoYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_box_default"
+                android:padding="@dimen/activity_vertical_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/llCoMonth"
+                app:layout_constraintTop_toBottomOf="@+id/etCoDebit">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/yyyy"
+                    android:textAppearance="@style/SubTitleStyle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgCoYear"
+                    android:layout_width="18dp"
+                    android:layout_height="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:rotation="90"
+                    app:srcCompat="@drawable/ic_next" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCard1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imgCard2"
+                app:layout_constraintTop_toBottomOf="@+id/etCoCVV"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_card1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCard2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@+id/imgCard1"
+                app:layout_constraintRight_toLeftOf="@+id/imgCard3"
+                app:layout_constraintTop_toBottomOf="@+id/etCoCVV"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_card2" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCard3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@+id/imgCard2"
+                app:layout_constraintRight_toRightOf="@+id/imgCard4"
+                app:layout_constraintTop_toBottomOf="@+id/etCoCVV"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_card3" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCard4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@+id/imgCard3"
+                app:layout_constraintRight_toRightOf="@+id/imgCard5"
+                app:layout_constraintTop_toBottomOf="@+id/etCoCVV"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_card4" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgCard5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_vertical_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@+id/imgCard4"
+                app:layout_constraintTop_toBottomOf="@+id/etCoCVV"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_card5" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbCoAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintRight_toLeftOf="@+id/txtCoAccept"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCard1"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txtCoAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/i_accept_al"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintLeft_toRightOf="@+id/cbCoAccept"
+                app:layout_constraintTop_toBottomOf="@+id/imgCard1"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txtCoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/any_data_wh"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbCoAccept" />
+
+            <TextView
+                android:id="@+id/txtCoType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/type_in_the"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCoData" />
+
+            <Button
+                android:id="@+id/btBookDemo"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/edit_box_default"
+                android:text="@string/reset"
+                android:textAppearance="@style/SubTextStyle1"
+                app:layout_constraintEnd_toStartOf="@+id/btCoSave"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCoType" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btCoSave"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                app:cardBackgroundColor="@color/colorPrimary"
+                app:cardCornerRadius="@dimen/dp_5"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/btBookDemo"
+                app:layout_constraintTop_toBottomOf="@+id/txtCoType">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/action_connect"
+                    android:textAppearance="@style/ButtonTextStyle" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

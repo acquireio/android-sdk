@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginEnd="@dimen/activity_vertical_margin">
+
+    <TextView
+        android:id="@+id/txtStartedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/sHeader2AQR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Recent Conversations" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgStartedSubTitle"
+        android:layout_width="24dp"
+        android:layout_height="13dp"
+        android:rotation="90"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStartedTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_next" />
+
+    <TextView
+        android:id="@+id/txtStartedSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="No new open tickets"
+        android:textAppearance="@style/SubTitleStyle"
+        app:layout_constraintStart_toStartOf="@+id/txtStartedTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtStartedTitle" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@drawable/bg_line"
+        app:layout_constraintTop_toBottomOf="@+id/txtStartedSubTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

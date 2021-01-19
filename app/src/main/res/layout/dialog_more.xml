@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/bg_dialog">
+
+    <TextView
+        android:id="@+id/txtMoreDiaTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/cnt_account_id"
+        android:textAppearance="@style/sHeader3AQR"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMoreDiaSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/cnt_account_id"
+        android:textAppearance="@style/SubTitleStyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMoreDiaTitle" />
+
+    <EditText
+        android:id="@+id/etMoreDiaId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edit_box_default"
+        android:hint="@string/prompt_account_id"
+        android:inputType="text"
+        android:padding="@dimen/activity_vertical_margin"
+        android:selectAllOnFocus="true"
+        android:textAppearance="@style/EditTextStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMoreDiaSubTitle" />
+
+    <Button
+        android:id="@+id/btMoreReset"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_button_1"
+        android:text="@string/reset"
+        android:clickable="false"
+        android:textAppearance="@style/sHeader3AQR"
+        android:textColor="#50123399"
+        app:layout_constraintEnd_toStartOf="@+id/btMoreSave"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMoreDiaId" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btMoreSave"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="40dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/dp_5"
+        app:cardElevation="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/btMoreReset"
+        app:layout_constraintTop_toBottomOf="@+id/etMoreDiaId">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/save"
+            android:textAppearance="@style/ButtonTextStyle" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

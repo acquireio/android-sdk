@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:id="@+id/rlFileSelf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chat_self"
+        android:padding="@dimen/activity_horizontal_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFileSelf"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/dummy_chat" />
+
+        <TextView
+            android:id="@+id/txtFileNameSelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/imgFileSelf"
+            android:text="letterhead.docx"
+            android:textAppearance="@style/sHeader5AQR" />
+
+        <TextView
+            android:id="@+id/txFileSizeSelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtFileNameSelf"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/imgFileSelf"
+            android:text="25kb"
+            android:textAppearance="@style/sHeader5AQR" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtFileTimeSelf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="2 min"
+        android:textAppearance="@style/SubTitleStyle"
+        app:layout_constraintEnd_toEndOf="@+id/rlFileSelf"
+        app:layout_constraintTop_toBottomOf="@+id/rlFileSelf" />
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rlFileSender"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/bg_chat_self"-->
+<!--        android:padding="@dimen/activity_horizontal_margin"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/imgFileSender"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            app:srcCompat="@drawable/dummy_chat" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtFileNameSender"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_toEndOf="@+id/imgFileSender"-->
+<!--            android:text="letterhead.docx"-->
+<!--            android:textAppearance="@style/sHeader5AQR" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txFileSizeSender"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/txtFileNameSender"-->
+<!--            android:layout_marginStart="12dp"-->
+<!--            android:layout_toEndOf="@+id/imgFileSender"-->
+<!--            android:text="25kb"-->
+<!--            android:textAppearance="@style/sHeader5AQR" />-->
+
+<!--    </RelativeLayout>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/txtFileTimeSender"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:text="2 min"-->
+<!--        android:textAppearance="@style/SubTitleStyle"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/rlFileSender"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/rlFileSender" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

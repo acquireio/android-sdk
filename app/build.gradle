@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "io.acquire.sdk"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.aar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.21"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    implementation 'io.acquire:core-twilio-beta:1.+'
+    implementation 'io.sentry:sentry-android:3.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.support:design:29.0.0'
+    implementation "androidx.fragment:fragment-ktx:1.2.5"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    def coroutines_version = "1.3.9"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation 'com.squareup.okhttp3:okhttp:4.8.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation('io.socket:socket.io-client:1.0.1') {
+        exclude group: 'org.json', module: 'json'
+    }
+    def event_bus_version = '3.2.0'
+    implementation "org.greenrobot:eventbus:$event_bus_version"
+    kapt "org.greenrobot:eventbus-annotation-processor:$event_bus_version"
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //room libs
+
+    def room_version = "2.2.6"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.20'
+    implementation 'androidx.emoji:emoji-appcompat:1.1.0'
+    implementation 'androidx.browser:browser:1.3.0'
+
+    //Twilio
+    implementation "com.twilio:video-android:6.0.0"
+    implementation "com.twilio:audioswitch:1.1.0"
+}
+kapt {
+    arguments {
+        arg('eventBusIndex', 'com.example.myapp.MyEventBusIndex')
+    }
+}

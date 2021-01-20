@@ -19,7 +19,7 @@ By this source, you will get to know about our sdk methods and its usage.
 Also maximum customization covered in this app to show our **android sdk** capabilities.
 
 To know more about our sdk features please visit our website.
-[Acquire - Android Docs](https://apidocs.acquire.io/#intro "Acquire - Android Docs")
+[Acquire - Android Docs](https://apidocs.acquire.io/#4860b029-1fa7-446e-8485-f1f732015df7 "Acquire - Android Docs")
 
 If you have any question or suggestion, we love to hear from you.
 [CONTACT US](https://acquire.io/ "CONTACT US")

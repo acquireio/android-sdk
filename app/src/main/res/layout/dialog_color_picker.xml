@@ -39,7 +39,7 @@
                     app:cardElevation="0dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <com.lyc.colorpicker.SVColorPickerView
+                    <com.acquiresdk.colorpicker.SVColorPickerView
                         android:id="@+id/pickerDiaColor"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -57,7 +57,7 @@
                     app:cardElevation="0dp"
                     app:cardPreventCornerOverlap="false">
 
-                    <com.lyc.colorpicker.HueBarView
+                    <com.acquiresdk.colorpicker.HueBarView
                         android:id="@+id/hbv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

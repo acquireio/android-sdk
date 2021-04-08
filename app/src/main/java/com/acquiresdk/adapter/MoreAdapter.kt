@@ -1,7 +1,6 @@
 package com.acquiresdk.adapter
 
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.graphics.PorterDuff
 import android.view.LayoutInflater
@@ -10,6 +9,8 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
+import com.acquire.sdk.AcquireApp
+import com.acquire.sdk.enums.CallType
 import com.acquiresdk.R
 import com.acquiresdk.activities.data.model.More
 import kotlinx.android.synthetic.main.item_in_app.view.*
@@ -27,7 +28,7 @@ class MoreAdapter(val ctx: Context, val data: LiveData<List<More>>) :
     override fun onBindViewHolder(p0: ViewHMore, p1: Int) {
         // val model:Model= data.value!!.get(p1)
         //p0.nam.text=model.name
-        p0.bindItems(data.value!!?.get(p1))
+        p0.bindItems(data.value!!.get(p1))
     }
 }
 
@@ -52,8 +53,14 @@ class ViewHMore(val ctx: Context, itemView: View) : RecyclerView.ViewHolder(item
         )
 
         itemView.setOnClickListener {
-//            val next = Class.forName(model.nextScreen)
-//            ctx.startActivity(Intent(ctx, next))
+            when (model.nextScreen) {
+                CallType.TEXT -> {
+                    AcquireApp.startSupportChat()
+                }
+                CallType.AUDIO, CallType.VIDEO -> {
+                    AcquireApp.startDirectSupportChat(model.nextScreen)
+                }
+            }
         }
     }
 }

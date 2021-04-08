@@ -2,6 +2,7 @@ package com.acquiresdk.activities.ui.more
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.acquire.sdk.enums.CallType
 import com.acquiresdk.R
 import com.acquiresdk.activities.data.model.More
 
@@ -24,7 +25,7 @@ class MoreViewModel : ViewModel() {
                 "INIT SDK",
                 "A small description about INIT SDK",
                 R.drawable.ic_more_reload,
-                ""
+                CallType.TEXT
             )
         )
         dataStringList.add(
@@ -32,15 +33,15 @@ class MoreViewModel : ViewModel() {
                 "Audio test",
                 "A quick audio test will start",
                 R.drawable.ic_splash_call,
-                ""
+                CallType.AUDIO
             )
         )
         dataStringList.add(
             More(
                 "Video test",
-                "A quick audio test will start",
+                "A quick video test will start",
                 R.drawable.ic_splash_video_call,
-                ""
+                CallType.VIDEO
             )
         )
 

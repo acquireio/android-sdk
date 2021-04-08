@@ -48,5 +48,12 @@ class CartActivity : AppCompatActivity() {
 
     fun startChat(view: View?) {
         AcquireApp.startSupportChat()
+
+      /*  val prefs =
+            getSharedPreferences(AppApplication.AcquirePref, Context.MODE_PRIVATE)
+        val accountID = prefs.getString("acc_id", null)
+        accountID?.let { AcquireApp.init(AppApplication.application, it) }.also {
+            AcquireApp.startSupportChat()
+        }*/
     }
 }

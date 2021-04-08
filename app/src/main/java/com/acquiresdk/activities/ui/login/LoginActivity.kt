@@ -47,7 +47,7 @@ class LoginActivity : AppCompatActivity(), OnSessionEvents {
             if (username.value.isNotEmpty()) {
                 accountId = username.value
                 // init id
-                AcquireApp.init(this.application, accountId)
+                AcquireApp.init(accountId)
 
                 tvLoginConnect.visibility = View.GONE
                 pbLogin.visibility = View.VISIBLE
@@ -76,4 +76,6 @@ class LoginActivity : AppCompatActivity(), OnSessionEvents {
             finish()
         }
     }
+
+
 }

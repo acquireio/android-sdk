@@ -24,7 +24,7 @@ class FAQAdapter(val ctx: Context, val data: LiveData<List<FAQ>>) :
     override fun onBindViewHolder(p0: ViewHFAQ, p1: Int) {
         // val model:Model= data.value!!.get(p1)
         //p0.nam.text=model.name
-        p0.bindItems(data.value!!?.get(p1))
+        p0.bindItems(data.value!![p1])
     }
 }
 

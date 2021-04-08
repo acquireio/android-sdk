@@ -21,8 +21,9 @@ class SplashActivity : AppCompatActivity() {
             val prefs =
                 getSharedPreferences(AppApplication.AcquirePref, Context.MODE_PRIVATE)
             val accountID = prefs.getString("acc_id", null)
-            if (!accountID.isNullOrEmpty()) {
-                AcquireApp.init(AppApplication.application, accountID)
+
+            if (accountID != null && accountID.isNotEmpty()) {
+                AcquireApp.init(accountID)
                 startActivity(
                     Intent(
                         this,

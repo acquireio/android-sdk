@@ -28,7 +28,7 @@ class GettingStartedAdapter(val ctx: Context, val data: LiveData<List<GettingSta
     override fun onBindViewHolder(p0: ViewHGettingStarted, p1: Int) {
         // val model:Model= data.value!!.get(p1)
         //p0.nam.text=model.name
-        p0.bindItems(data.value!!?.get(p1))
+        p0.bindItems(data.value!![p1])
     }
 }
 

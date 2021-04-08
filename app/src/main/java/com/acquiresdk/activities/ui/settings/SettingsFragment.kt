@@ -18,9 +18,9 @@ import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.acquiresdk.R
+import com.acquiresdk.colorpicker.HueBarView
+import com.acquiresdk.colorpicker.SVColorPickerView
 import com.acquiresdk.utils.ToolbarUtils
-import com.lyc.colorpicker.HueBarView
-import com.lyc.colorpicker.SVColorPickerView
 import java.lang.String
 
 class SettingsFragment : Fragment() {

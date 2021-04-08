@@ -26,7 +26,7 @@ class InAppAdapter(val ctx: Context, val data: LiveData<List<InAppData>>) :
     override fun onBindViewHolder(p0: ViewH, p1: Int) {
         // val model:Model= data.value!!.get(p1)
         //p0.nam.text=model.name
-        p0.bindItems(data.value!!?.get(p1))
+        p0.bindItems(data.value!![p1])
     }
 }
 

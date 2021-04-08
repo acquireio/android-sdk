@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
@@ -37,7 +38,6 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
             android:text="@string/cnt_account_id"
-            android:textAppearance="@style/sHeader3AQR"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recyclerViewMore" />
 
@@ -48,7 +48,6 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="8dp"
             android:text="BB711"
-            android:textAppearance="@style/sHeader4AQR"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtMoreAccountIdLabel" />
 
@@ -61,7 +60,6 @@
             android:layout_marginEnd="40dp"
             android:background="@drawable/bg_button_1"
             android:text="@string/change_account"
-            android:textAppearance="@style/sHeader3AQR"
             android:textColor="@color/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +81,6 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="50dp"
             android:text="@string/sdk_status"
-            android:textAppearance="@style/sHeader3AQR"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/viewMoreId" />
 
@@ -94,9 +91,9 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="8dp"
             android:text="@string/connected"
-            android:textAppearance="@style/sHeader4AQR"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtMoreSDKStatusLabel" />
+
 
         <TextView
             android:id="@+id/txtMoreLogoutText"
@@ -105,7 +102,6 @@
             android:layout_marginStart="40dp"
             android:layout_marginTop="25dp"
             android:text="@string/logout"
-            android:textAppearance="@style/sHeader3AQR"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtMoreSDKStatus" />
 
@@ -123,10 +119,10 @@
             android:id="@+id/viewLoading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#80ffffff"
             android:clickable="true"
             android:focusable="true"
-            android:visibility="gone"
-            android:background="#80ffffff" />
+            android:visibility="gone" />
 
         <ProgressBar
             android:id="@+id/loading"

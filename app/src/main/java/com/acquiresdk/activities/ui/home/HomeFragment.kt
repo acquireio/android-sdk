@@ -28,14 +28,14 @@ class HomeFragment : Fragment() {
 
         val viewWidgetExp = root.findViewById(R.id.viewWidgetExp) as View
         val viewCoBrowseExp = root.findViewById(R.id.viewCoBrowseExp) as View
-        val viewBgInApp = root.findViewById(R.id.viewBgInApp) as View
+        val viewInAppExp = root.findViewById(R.id.viewInAppExp) as View
         viewWidgetExp.setOnClickListener {
             activity.startActivity(Intent(activity, CartActivity::class.java))
         }
         viewCoBrowseExp.setOnClickListener {
             activity.startActivity(Intent(activity, CoBrowseActivity::class.java))
         }
-        viewBgInApp.setOnClickListener {
+        viewInAppExp.setOnClickListener {
             activity.startActivity(Intent(activity, InAppActivity::class.java))
         }
         return root

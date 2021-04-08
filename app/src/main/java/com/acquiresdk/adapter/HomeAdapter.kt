@@ -19,7 +19,6 @@ class HomeAdapter(private val listdata: Array<HomeItem>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val myListData = listdata[position]
     }
 
     override fun getItemCount(): Int {
@@ -27,10 +26,5 @@ class HomeAdapter(private val listdata: Array<HomeItem>) :
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-//        var imageView: ImageView
-//
-//        init {
-//            imageView = itemView.findViewById(R.id.imageView)
-//        }
     }
 }

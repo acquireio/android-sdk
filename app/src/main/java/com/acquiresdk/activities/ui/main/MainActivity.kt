@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
+import com.acquire.sdk.AcquireApp
 import com.acquire.sdk.utils.StatusIconColorType
 import com.acquire.sdk.utils.setStatusBarColor
 import com.acquiresdk.R
@@ -16,9 +17,11 @@ import com.acquiresdk.activities.ui.home.HomeFragment
 import com.acquiresdk.activities.ui.more.MoreFragment
 import com.acquiresdk.activities.ui.settings.SettingsFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONObject
+import java.util.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()/*, OnSessionEvents*/ {
     private var mTxtMenuHome: TextView? = null
     private var mTvMenuSettings: TextView? = null
     private var mTvMenuMore: TextView? = null
@@ -33,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setStatusBarColor(Color.WHITE, StatusIconColorType.Dark)
         setContentView(R.layout.activity_main)
+
+//        AcquireApp.setSessionListener(this@MainActivity)
         findViews()
 
         // default set to 0
@@ -49,6 +54,7 @@ class MainActivity : AppCompatActivity() {
         llMenuMore.setOnClickListener {
             setFragment(2, MoreFragment())
         }
+//        configureAcquireIO()
     }
 
     private fun findViews() {
@@ -82,5 +88,30 @@ class MainActivity : AppCompatActivity() {
         mImgMenuSettings?.setColorFilter(isSettings, PorterDuff.Mode.SRC_ATOP)
         mImgMenuMore?.setColorFilter(isMore, PorterDuff.Mode.SRC_ATOP)
     }
+
+    private fun configureAcquireIO() {
+        AcquireApp.setThumbPosXY(50, 100)
+        AcquireApp.setThumbLocalFrameSize(100, 200)
+        AcquireApp.removeMinimizeButton()
+        AcquireApp.removeDisconnectButton()
+        AcquireApp.removeCameraButton()
+        AcquireApp.keepButtonsVisibleForThumbView()
+        AcquireApp.disableThumbViewDoubleTap()
+
+        AcquireApp.turnOffNotifications()
+
+        AcquireApp.setVisitorHash("TEst_${UUID.randomUUID()}")
+        AcquireApp.setVisitorRemarks("testRemarks")
+
+        AcquireApp.shrinkLayoutToThumbView()
+        AcquireApp.setLocalVideoRotation(90)
+        AcquireApp.getConnectionStatus()
+        AcquireApp.isHideNewChat()
+        AcquireApp.isDisableNoAgent()
+        AcquireApp.disableNoAgentMsg()
+        AcquireApp.getVisitorId()
+        AcquireApp.logOut { }
+    }
+
 
 }
